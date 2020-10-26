@@ -14,3 +14,6 @@ storage "consul" {
 }
 
 disable_mlock = true
+
+api_addr = "http://172.31.xxx.54:8200"
+cluster_addr = "https://172l.31.xxx.54:8201"
