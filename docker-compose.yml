@@ -8,7 +8,6 @@ services:
     cap_add:
       - IPC_LOCK
     labels:
-      - "SERVICE_NAME=vault"
       - "app=vault"
       - "zone=kitt"
       - "traefik.enable=true"
@@ -19,8 +18,6 @@ services:
     networks:
       default:
         ipv4_address: ${KITT_NETWORK_PREFIX}.54
-    ports:
-      - 8200
 
 networks:
   default:
