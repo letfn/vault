@@ -15,3 +15,13 @@ down:
 recreate:
 	$(MAKE) clean
 	$(MAKE) up
+
+init:
+	docker-compose exec vault vault operator init
+
+unseal:
+	for a in 1 2 3; do docker-compose exec vault vault operator unseal; done
+
+seal:
+	docker-compose exec vault vault operator seal
+
