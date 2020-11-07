@@ -16,8 +16,3 @@ storage "consul" {
 service_registration "consul" {
   address = "169.254.32.1:8500"
 }
-
-disable_mlock = true
-
-api_addr = "http://172.31.xxx.54:8200"
-cluster_addr = "https://172.31.xxx.54:8201"
