@@ -16,8 +16,17 @@ recreate:
 	$(MAKE) clean
 	$(MAKE) up
 
+logs:
+	docker-compose logs -f
+
+status:
+	docker-compose exec vault \
+		vault status
+
 init:
-	docker-compose exec vault vault operator init
+	docker-compose exec vault \
+		vault operator init \
+			-recovery-shares=1 -recovery-threshold=1
 
 unseal:
 	for a in 1 2 3; do docker-compose exec vault vault operator unseal; done
