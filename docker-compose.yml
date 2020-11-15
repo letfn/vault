@@ -19,6 +19,8 @@ services:
     networks:
       default:
         ipv4_address: ${KITT_NETWORK_PREFIX}.54
+    dns:
+      - 169.254.32.1
     restart: always
 
 networks:
