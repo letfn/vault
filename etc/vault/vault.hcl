@@ -20,7 +20,7 @@ service_registration "consul" {
 }
 
 seal "transit" {
-  address = "http://192.168.195.250:8200"
+  address = "http://unseal.service.dc1.consul:8200"
   disable_renewal = "false"
   key_name = "dc1"
   mount_path = "transit/"
