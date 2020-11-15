@@ -27,10 +27,3 @@ init:
 	docker-compose exec vault \
 		vault operator init \
 			-recovery-shares=1 -recovery-threshold=1
-
-unseal:
-	for a in 1 2 3; do docker-compose exec vault vault operator unseal; done
-
-seal:
-	docker-compose exec vault vault operator seal
-
