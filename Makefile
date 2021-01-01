@@ -36,3 +36,8 @@ init:
 	docker-compose exec vault \
 		vault operator init \
 			-recovery-shares=1 -recovery-threshold=1
+
+migrate:
+	docker-compose exec vault \
+		vault operator unseal \
+			-migrate
