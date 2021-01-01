@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   vault:
-    image: letfn/vault
+    image: defn/vault
     volumes:
       - ./etc/vault:/config
     cap_add:
@@ -19,8 +19,6 @@ services:
     networks:
       default:
         ipv4_address: ${KITT_NETWORK_PREFIX}.54
-    dns:
-      - 169.254.32.1
     restart: always
 
 networks:
