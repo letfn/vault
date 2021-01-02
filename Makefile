@@ -4,10 +4,10 @@ menu:
 	@perl -ne 'printf("%10s: %s\n","$$1","$$2") if m{^([\w+-]+):[^#]+#\s(.+)$$}' Makefile
 
 build: # Build defn/vault
-	docker build -t defn/vault .
+	podman build -t defn/vault .
 
 push: # Push defn/vault
-	docker push defn/vault
+	podman push defn/vault
 
 bash: # Run bash shell with defn/vault
 	docker run --rm -ti --entrypoint bash defn/vault
