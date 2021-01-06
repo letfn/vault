@@ -1,7 +1,7 @@
- #!/usr/bin/env bash
+#!/usr/bin/env bash
 
- function main {
+function main {
   exec vault server -config=/config/vault.hcl
- }
+}
 
- main "$@"
+main "$@"

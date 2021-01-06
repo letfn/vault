@@ -5,6 +5,6 @@ RUN apk upgrade && apk add bash
 COPY service /service
 RUN chmod 755 /service
 
-ENTRYPOINT [ "bash" ]
+ENTRYPOINT [ "/service" ]
 
-CMD [ "/service" ]
+CMD [ ]
