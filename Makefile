@@ -9,6 +9,9 @@ build: # Build defn/vault
 push: # Push defn/vault
 	podman push defn/vault
 
+pull : # Pull defn/vault
+	docker pull defn/vault
+
 bash: # Run bash shell with defn/vault
 	docker run --rm -ti --entrypoint bash defn/vault
 
@@ -27,6 +30,9 @@ recreate:
 
 logs:
 	docker-compose logs -f
+
+pr:
+	gh pr create --web
 
 status:
 	docker-compose exec vault \
