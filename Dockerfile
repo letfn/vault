@@ -1,4 +1,4 @@
-FROM vault:1.6.1
+FROM vault:1.6.2
 
 RUN apk upgrade && apk add bash
 
