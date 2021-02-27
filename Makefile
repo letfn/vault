@@ -3,17 +3,17 @@ SHELL := /bin/bash
 menu:
 	@perl -ne 'printf("%10s: %s\n","$$1","$$2") if m{^([\w+-]+):[^#]+#\s(.+)$$}' Makefile
 
-build: # Build defn/vault
-	podman build -t defn/vault .
+build: # Build defn/vault:1.6.3
+	docker build -t defn/vault:1.6.3 .
 
-push: # Push defn/vault
-	podman push defn/vault
+push: # Push defn/vault:1.6.3
+	docker push defn/vault:1.6.3
 
-pull : # Pull defn/vault
-	docker pull defn/vault
+pull : # Pull defn/vault:1.6.3
+	docker pull defn/vault:1.6.3
 
-bash: # Run bash shell with defn/vault
-	docker run --rm -ti --entrypoint bash defn/vault
+bash: # Run bash shell with defn/vault:1.6.3
+	docker run --rm -ti --entrypoint bash defn/vault:1.6.3
 
 clean:
 	docker-compose down --remove-orphans

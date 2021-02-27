@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   vault:
-    image: defn/vault
+    image: defn/vault:1.6.3
     volumes:
       - ./etc/vault:/config
     cap_add:
